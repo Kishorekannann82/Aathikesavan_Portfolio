@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 9%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      border-bottom: 1px solid rgba(183, 75, 75, 0.3);
+    }
+
+    .logo {
+      font-size: 2.8rem;
+      color: #b74b4b;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.4s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    nav {
+      display: flex;
+      gap: 3rem;
+    }
+
+    nav a {
+      font-size: 1.7rem;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #b74b4b;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #b74b4b;
+    }
+
+    /* ===== PROJECTS SECTION ===== */
+    section.projects {
+      min-height: 100vh;
+      padding: 10rem 9% 5rem;
+      background-color: black;
+    }
+
+    .heading {
+      font-size: 4rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .heading span {
+      color: #b74b4b;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+
+    .project-card {
+      background-color: #161616;
+      border: 2px solid #b74b4b;
+      border-radius: 1.5rem;
+      padding: 2.5rem 3rem;
+      transition: 0.3s ease;
+      text-align: center;
+      box-shadow: 0 0 10px transparent;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px #b74b4b;
+    }
+
+    .project-card i {
+      font-size: 3.5rem;
+      color: #b74b4b;
+      margin-bottom: 1rem;
+    }
+
+    .project-card h3 {
+      font-size: 2.2rem;
+      color: #b74b4b;
+      margin-bottom: 1rem;
+    }
+
+    .project-card p {
+      font-size: 1.5rem;
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .project-links a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.8rem;
+      border: 2px solid #b74b4b;
+      color: #b74b4b;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-size: 1.4rem;
+      transition: 0.3s ease;
+    }
+
+    .project-links a:hover {
+      background-color: #b74b4b;
+      color: black;
+      box-shadow: 0 0 20px #b74b4b;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 995px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 5%;
+      }
+
+      nav {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .heading {
+        font-size: 3rem;
+      }
+
+      .project-card {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">Alex</a>
+    <nav>
+      <a href="index.html">Home</a>
+      
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="projects" id="projects">
+    <h2 class="heading">My <span>Projects</span></h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+        <i class="fa-solid fa-solar-panel"></i>
+        <h3>Solar Panels Tracking Non-Electrical Device</h3>
+        <p>Developed a non-electrical tracking system that aligns solar panels with the sun’s movement, improving efficiency and sustainability without using electrical components.</p>
+        <div class="project-links">
+          <a href="#">View Details</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <i class="fa-solid fa-water"></i>
+        <h3>PALS Aqua – Aquatic Cleaning Drone</h3>
+        <p>Participated in an aquatic cleaning drone challenge. Designed a drone prototype capable of collecting waste from water surfaces using embedded systems and IoT sensors.</p>
+        <div class="project-links">
+          <a href="#">View Details</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <i class="fa-solid fa-rocket"></i>
+        <h3>Design and Control of Thrust Vectoring Rocket Engine</h3>
+        <p>Designed and controlled a thrust vectoring rocket engine using PID and LQR controllers. Built a custom flight controller to achieve precise attitude and stability control during test flights.</p>
+        <div class="project-links">
+          <a href="#">View Details</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 9%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      border-bottom: 1px solid rgba(183, 75, 75, 0.3);
+    }
+
+    .logo {
+      font-size: 2.8rem;
+      color: #b74b4b;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.4s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    nav {
+      display: flex;
+      gap: 3rem;
+    }
+
+    nav a {
+      font-size: 1.7rem;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #b74b4b;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #b74b4b;
+    }
+
+    /* ===== EDUCATION SECTION ===== */
+    section.education {
+      min-height: 100vh;
+      padding: 10rem 9% 5rem;
+      background-color: black;
+    }
+
+    .heading {
+      font-size: 4rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .heading span {
+      color: #b74b4b;
+    }
+
+    .education-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .edu-card {
+      background-color: #161616;
+      border: 2px solid #b74b4b;
+      border-radius: 1.5rem;
+      padding: 2.5rem 3rem;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px #b74b4b;
+    }
+
+    .edu-card h3 {
+      font-size: 2.4rem;
+      color: #b74b4b;
+      margin-bottom: 1rem;
+    }
+
+    .edu-card h4 {
+      font-size: 1.8rem;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .edu-card p {
+      font-size: 1.5rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .edu-year {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 1.4rem;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 995px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 5%;
+      }
+
+      nav {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .heading {
+        font-size: 3rem;
+      }
+
+      .edu-card {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">Alex</a>
+    <nav>
+      <a href="index.html">Home</a>
+      
+      <a href="skills.html">Skills</a>
+      <a href="education.html" class="active">Education</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="education" id="education">
+    <h2 class="heading">My <span>Education</span></h2>
+
+    <div class="education-container">
+
+      <div class="edu-card">
+        <span class="edu-year">2022 – 2026</span>
+        <h3>BE - Electronics and Communication Engineering</h3>
+        <h4>KIT - Kalaignarkarunanidhi Institute of Technology, Coimbatore</h4>
+        <p>CGPA: 7.79<br>
+        Focused on semiconductor design, circuit analysis, IoT, and embedded systems. Developed projects such as solar panel tracking and aquatic drone innovation.</p>
+      </div>
+
+      <div class="edu-card">
+        <span class="edu-year">2021 – 2022</span>
+        <h3>HSC</h3>
+        <h4>Government Higher Secondary School, Bandahalli</h4>
+        <p>Secured 67%. Focused on mathematics and physics fundamentals that strengthened my engineering foundation.</p>
+      </div>
+
+      <div class="edu-card">
+        <span class="edu-year">2019 – 2020</span>
+        <h3>SSLC</h3>
+        <h4>Government Higher Secondary School, Bandahalli</h4>
+        <p>Secured 60%. Built strong problem-solving and logical reasoning skills during high school studies.</p>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
